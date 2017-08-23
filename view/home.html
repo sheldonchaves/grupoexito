@@ -1,0 +1,115 @@
+<!-- <div class="row header-suzano">
+    <div class="col-sm-11">
+    <a class="btn btn-xs btn-warning btn-min-alert" href="#" role="button" ng-click="openPop()"><i class="fa fa-bell" aria-hidden="true"> alertas</i></a>
+    </div>
+    <div class="col-sm-1">
+        <a ng-click="config()">
+            <i class="fa fa-cog fa-2x" aria-hidden="true"></i>
+        </a>
+    </div>
+</div> -->
+<div class="row">
+    <panel ng-if="windows[6].enable" title="Factura por categoria" icon="fa-hashtag" height="50" col="6" panelclass="panel-danger" size="sm">
+        <c3chart bindto-id="stacked-bar-plot1-chart" chart-data="dadosGraficos" chart-columns="dadosGraficosColunas" chart-x="datax">
+            <chart-size chart-height="160" />
+            <chart-axes values-x="x" />
+            <chart-axis>
+                <chart-axis-x axis-position="outer-center" axis-label="Dados Mercado" axis-type="category" />
+            </chart-axis>
+            <chart-bar ratio="0.8" />
+        </c3chart>
+    </panel>
+    <panel ng-if="windows[2].enable" title="Ofertas" icon="fa-search" height="50" col="6" size="sm" panelclass="panel-success">
+        <table class="table table-hover">
+            <tbody>
+                <tr ng-repeat="oferta in ofertas">
+                    <td>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <img class="img-responsive" src="{{oferta.url}}">
+                            </div>
+                            <div class="col-sm-9">
+                                <span class="oferta-titulo">{{oferta.label}}</span>
+                                <span class="oferta-valor">{{oferta.value}}</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </panel>
+    <panel ng-if="windows[1].enable" title="Consulta Stickers Vigentes" icon="fa-exchange" height="50" col="6" size="sm">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Número de tarjeta</th>
+                    <th>Cadena</th>
+                    <th>Fecha Final Rede</th>
+                    <th>Fecha Inicial</th>
+                    <th>Em Bolsão</th>
+                    <th>Nombre del Bolsão</th>
+                    <th>Stickers Disponibles</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="stiker in stikers">
+                        <td>{{stiker.numero}}</td>
+                        <td>{{stiker.cadena}}</td>
+                        <td>{{stiker.fechaFinal}}</td>
+                        <td>{{stiker.fechaInicial}}</td>
+                        <td>{{stiker.bolsao}}</td>
+                        <td>{{stiker.nombre}}</td>
+                        <td>{{stiker.stickers}}</td>
+
+
+
+ 
+                </tr>
+            </tbody>
+        </table>
+    </panel>
+    <panel ng-if="windows[3].enable" title="Movimiento de Puntos" icon="fa-file-text-o" height="50" col="6" panelclass="panel-info" size="sm">
+<!--         <div class="input-group input-group-sm">
+    <span class="input-group-addon" id="sizing-addon2"><i class="fa fa-search"
+                                                                  aria-hidden="true"></i></span>
+    <input type="text" class="form-control" placeholder="busca" aria-describedby="sizing-addon1" ng-model="filtro1">
+</div> -->
+        
+
+
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Id Concepto</th>
+                    <th>Concepto</th>
+                    <th>Nro. Puntos</th>
+                    <th>Extra Puntos</th>
+                    <th>Programa</th>
+                    <th>Código Dep.</th>
+                    <th>Dependencia</th>
+                    <th>Monto trans.</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="punto in puntos | filter:filtro1">
+                    <td>{{punto.id}}</td>
+                    <td>{{punto.idConcepto}}</td>
+                    <td>{{punto.concepto}}</td>
+                    <td>{{punto.nroPuntos}}</td>
+                    <td>{{punto.extraPuntos}}</td>
+                    <td>{{punto.programa}}</td>
+                    <td>{{punto.codigoDep}}</td>
+                    <td>{{punto.dependencia}}</td>
+                    <td>{{punto.montoTrans}}</td>
+                    <td>{{punto.fecha}}</td>
+
+
+
+                </tr>
+            </tbody>
+        </table>
+    </panel>
+</div>

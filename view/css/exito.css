@@ -1,0 +1,28 @@
+.header-suzano {
+    padding: 5px;
+    background: #eee;
+    margin-bottom: 5px;
+}
+
+.config-checkbox {
+    padding: 10px 40px;
+}
+
+.config-checkbox .checkbox label {
+    font-size: 15px;
+}
+
+.oferta-titulo{
+	   font-size: 3em;
+    text-transform: capitalize;
+    display: block;
+    margin: 10px 0;
+
+}
+
+.oferta-valor{
+	    font-size: 2em;
+    font-weight: 600;
+    margin-top: 15px;
+    display: block;
+}
