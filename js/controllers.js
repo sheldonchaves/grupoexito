@@ -200,19 +200,25 @@ angular.module("App.controllers", [])
 
         $rootScope.dadosGraficos = [{
             "x": "mês1",
+            "hog": 22,
             "cim": 47,
             "col": 12,
-            "bas": 6
+            "bas": 6,
+            "tec": 33
         }, {
             "x": "mês2",
+             "hog": 44,
             "cim": 55,
             "col": 22,
-            "bas": 11
+            "bas": 11,
+            "tec": 29
         }, {
             "x": "mês3",
+             "hog": 55,
             "cim": 66,
             "col": 33,
-            "bas": 15
+            "bas": 15,
+            "tec": 44
         }];
 
 
@@ -221,7 +227,12 @@ angular.module("App.controllers", [])
 
 
 
-        $rootScope.dadosGraficosColunas = [{
+        $rootScope.dadosGraficosColunas = [
+        {
+            "id": "hog",
+            "type": "bar",
+            "name": "Hogar"
+        },{
             "id": "cim",
             "type": "bar",
             "name": "Alimentacion"
@@ -233,7 +244,15 @@ angular.module("App.controllers", [])
             "id": "bas",
             "type": "bar",
             "name": "Ropa"
+        }, {
+            "id": "tec",
+            "type": "bar",
+            "name": "Tecnologia"
         }];
+
+
+
+
 
         $rootScope.datax = {
             "id": "x"
@@ -417,10 +436,26 @@ angular.module("App.controllers", [])
         ]
 
         $rootScope.ofertas = [
-            {label:"carulla", value:"$ 10.200", url: "view/images/carulla.jpg"},
-            {label:"cautivia", value:"$ 3.150", url: "view/images/cautivia.jpg"},
-            {label:"ekono", value:"$ 6.300", url: "view/images/ekono.jpg"},
-            {label:"pomona", value:"$ 8.200", url: "view/images/pomona.jpg"}
+            {label:"Hamburguesa De Pollo Apanado X 5 Unidades",
+                value:"$ 10.200",
+                desc:"KOKORIKO | PLU: 131136 | PRESENTACIÓN: U",
+                link:"http://www.exito.com/products/0000467644660215/Hamburguesa+De+Pollo+Apanado+X+5+Unidades",
+                url: "view/images/001.jpg"},
+            {label:"Hamburguesa De Pollo Apanado",
+                value:"$ 3.150",
+                desc:"ZENU | PLU: 30494 | PRESENTACIÓN: U",
+                link:"http://www.exito.com/products/0001381852200822/Hamburguesa+De+Pollo+Apanado",
+                url: "view/images/002.jpg"},
+            {label:"Nuggets De Pollo X 60 Unidades",
+                value:"$ 26.900",
+                desc:"TROOP X | PLU: 630887 | PRESENTACIÓN: U",
+                link:"http://www.exito.com/products/0001055513004971/Nuggets+De+Pollo+X+60+Unidades",
+                url: "view/images/003.jpg"},
+            {label:"Pechuga De Pollo",
+                value:"$ 12.200",
+                desc:"PLU: 671545 | PRESENTACIÓN: 1.0 KG",
+                link:"http://www.exito.com/products/0000595591882357/Pechuga+De+Pollo",
+                url: "view/images/004.jpg"}
         ];
 
         $rootScope.pedidos = [{

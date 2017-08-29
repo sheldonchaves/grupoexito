@@ -12,17 +12,27 @@
     font-size: 15px;
 }
 
-.oferta-titulo{
-	   font-size: 3em;
+.oferta-titulo {
+    font-size: 3em;
     text-transform: capitalize;
     display: block;
     margin: 10px 0;
-
+    line-height: 1em;
 }
 
-.oferta-valor{
-	    font-size: 2em;
+.oferta-valor {
+    font-size: 2em;
     font-weight: 600;
     margin-top: 15px;
     display: block;
 }
+
+.oferta-desc {
+    font-size: 1.5em;
+    color: #666;
+    text-transform: capitalize;
+    display: block;
+    margin: 0;
+}
+
+.oferta-image {}

@@ -25,13 +25,16 @@
                 <tr ng-repeat="oferta in ofertas">
                     <td>
                         <div class="row">
-                            <div class="col-sm-3">
-                                <img class="img-responsive" src="{{oferta.url}}">
-                            </div>
-                            <div class="col-sm-9">
-                                <span class="oferta-titulo">{{oferta.label}}</span>
-                                <span class="oferta-valor">{{oferta.value}}</span>
-                            </div>
+                            <a href="{{oferta.link}}" target="_blank">
+                                <div class="col-md-3">
+                                <img class="img-responsive oferta-image" src="{{oferta.url}}">
+                                </div>
+                                <div class="col-md-8">
+                                    <span class="oferta-titulo">{{oferta.label}}</span>
+                                    <span class="oferta-desc">{{oferta.desc}}</span>
+                                    <span class="oferta-valor">{{oferta.value}}</span>
+                                </div>
+                            </a>
                         </div>
                     </td>
                 </tr>
@@ -42,12 +45,17 @@
         <table class="table table-hover">
             <thead>
                 <tr>
+
+
+
+
+
                     <th>Número de tarjeta</th>
                     <th>Cadena</th>
-                    <th>Fecha Final Rede</th>
+                    <th>Fecha Final De Redención</th>
                     <th>Fecha Inicial</th>
-                    <th>Em Bolsão</th>
-                    <th>Nombre del Bolsão</th>
+                    <th>Id Bolsillo</th>
+                    <th>Nombre Del Bolsillo</th>
                     <th>Stickers Disponibles</th>
                 </tr>
             </thead>
